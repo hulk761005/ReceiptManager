@@ -28,7 +28,7 @@ namespace ReceiptManager.Controllers.Api
         {
             MongoClient _client = new MongoClient("mongodb://192.168.10.219:27017");
             var db = _client.GetDatabase("MyAccounting");
-            var collection = db.GetCollection<ReceiptAddViewModel>("TESTTEST");
+            var collection = db.GetCollection<ReceiptAddViewModel>("receipt");
             collection.InsertOne(model);
         }
 
